@@ -187,3 +187,35 @@ Basic Operation Count = Total Number of Steps = 12
 
 = Number of Vertices + Number of Edges = 6 + 6 = O(V+E) 
 
+<h4>Mathematical Analysis – </h4>
+
+Let N represent the typical quantity of edges that occur at each node (N = E / V). 
+
+As a result, queue operations take O(N) time on each node. 
+
+The entire runtime is O(V) O(N) = O(V) O (E / V) = O because there are V nodes 
+(E). 
+
+The problem is that, strangely enough, we can't state that O(V) O(E / V) = O in 
+this case (E).  O (E / V) represents the average effort per node. As a result, the 
+amount of work completed asymptotically is constrained from above by a certain 
+multiple of E / V. 
+
+<p align = "justify">When we consider what BFS does, the work done per node probably looks more like c1 + c2E / V because there is some baseline work done per node (establishing loops, checking fundamental conditions, etc.), which is what is accounted for by the c1 term, as well as some amount of work proportional to the number of edges 
+visited (E / V, times the work done per edge). This is equal to that if we multiply 
+it by V. </p>
+
+V · (c1 + c2E / V) 
+
+= c1V + c2E 
+
+= Θ(V + E) 
+
+These lower-order concepts that big-O so neatly allows us to ignore are significant 
+in our situation, so we cannot just easily dismiss them. So, at least 
+mathematically, that is what is happening. 
+
+Regardless of how many edges are present in the graph, each node still requires 
+a certain amount of work that is independent of the edges. This is the setup 
+needed to execute the main if statements and create local variables, among other 
+things.

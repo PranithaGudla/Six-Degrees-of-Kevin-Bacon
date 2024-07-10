@@ -111,4 +111,79 @@ problem.</p>
 <h4>Formal Time Complexity Analysis – 
 Practical Illustration -</h4>
 
+![image](https://github.com/PranithaGudla/Six-Degrees-of-Kevin-Bacon/assets/172133526/1d687d97-5f91-4015-99a6-e6105a31d02b)
+
+Basic Operation : Traversing the graph using BFS 
+
+The time complexity of BFS algorithm on the above graph is the number of 
+
+Steps taken to traverse through all the nodes of the graph – 
+
+Part – 01: Creating Adjacency List 
+
+A – {B,E} 
+
+B – {C} 
+
+C – {D,F} 
+
+D – {} 
+
+E – {C} 
+
+F – {} 
+
+Part – 02: 
+
+Step – 01: Traversing through the graph using BFS 
+
+Enqueue – A 
+
+Step – 02: 
+
+Enqueue – B 
+
+Step – 03: 
+
+Enqueue – C 
+
+Step – 04: 
+
+Dequeue – A 
+
+Step – 05: 
+
+Enqueue – D 
+
+Step – 06: 
+
+Dequeue – B 
+
+Step – 07: 
+
+Dequeue – C 
+
+Step – 08: 
+
+Enqueue – E 
+
+Step – 9: 
+
+Enqueue – F 
+
+Step – 10: 
+
+Dequeue – D 
+
+Step – 11: 
+
+Dequeue – E 
+
+Step – 12: 
+
+Dequeue - F 
+
+Basic Operation Count = Total Number of Steps = 12 
+
+= Number of Vertices + Number of Edges = 6 + 6 = O(V+E) 
 

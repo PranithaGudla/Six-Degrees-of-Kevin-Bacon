@@ -35,6 +35,7 @@ Based on our Problem Statement, we have made a system model using Data Flow
 Diagram. It is as follows –</p>
 
 ![image](https://github.com/PranithaGudla/Six-Degrees-of-Kevin-Bacon/assets/172133526/2f869394-fd88-4482-9d9a-3fcd5fd19ae5)
+
 <p align = "justify">Few assumptions we have made before proceeding to the solution were as follows – </p>
 
 <p align="justify">➢ Since we are trying to make an application that would work on systems 
@@ -54,3 +55,60 @@ data that can connect them. </p>
 terminology since swapping the source and target names would not have 
 any impact on the degree value. Thus, we prompt the user to enter the 
 name for both inputs instead of prompting source and target.</p>
+
+<h2>Solution</h2>
+
+<p align="justify">→ Firstly, we have chosen the following simulation settings –  </p>
+
+    IDE – Visual Studio Code 
+
+    Programming Language – Python 
+
+    Dataset Resource – IMDB 
+
+    Dataset File Format – csv
+
+<p align="justify">→ Then, we moved on to the algorithm part. Initially we have looked for better data structure than a graph. However, though there are other 
+data structures using which current problem can be solved it turned out 
+that graph is the best possible data structure for this problem. </p>
+
+<p align="justify">→ Later, we started working on deciding upon an algorithm. We found 
+Dijkstra’s algorithm and BFS are competitive enough. But Dijkstra’s 
+algorithm would require weighted graph with only positive weights. Thus, BFS seemed efficient.</p> 
+
+<p align="justify">→ Since all the required concepts for moving ahead into implementation are finalised, we started off from datasets. We downloaded datasets 
+from IMBD. They were too large and were in a bizarre file format. We 
+converted them into a feasible dataset of format .csv.  </p>
+
+<p align="justify">→ Then we started actual implementation part. We initiated dictionaries into which the dataset values will be loaded. </p>
+
+<p align="justify">→ We have taken three datasets –   </p>
+
+    Actorpeople – Consists of the data regarding actors and actresses 
+  
+    Movielist – Consists of the data regarding movies 
+  
+    Peoplestars – Used to relate actors and movies. 
+
+<p align="justify">→ Then the names of the source and target will be prompted. Once the 
+input is given it would be verified over the datasets. If the actor is not 
+found in the dataset or if there is a typo in the input it would return 
+person not found. If there are multiple records with the same actor’s 
+name then the user would be prompted to enter the id number of the 
+actor. </p>
+
+<p align="justify">→ After the source and target names are locked, BFS algorithm would run over all the neighbours of the source. The BFS algorithm would stop 
+upon reaching the target node. It would return the path to the target. </p>
+
+<p align="justify">→ The path would be returned to the main method excluding the target 
+node name. </p>
+
+<p align="justify">→ The length of the path after excluding the target is the degree of the actor corresponding to the other target. </p>
+
+<p align="justify">This is how we have made a step-by-step implementation guide to our 
+problem.</p>
+
+<h4>Formal Time Complexity Analysis – 
+Practical Illustration -</h4>
+
+
